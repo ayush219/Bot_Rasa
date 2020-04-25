@@ -1,0 +1,35 @@
+intents:
+  - greet  
+  - bye  
+  - population_density
+  - population
+  - area
+  - inform
+
+actions:
+  - action_population_density
+  - action_population
+  - action_area
+    
+  
+entities:
+  - location
+  
+slots: 
+  location:
+    type: text       
+          
+responses:
+  utter_greet:
+  - text: "Hey! What do you want to know?" 
+    
+  utter_asklocation:
+  - text: "please provide location"
+  
+  utter_bye:
+  - text: "Bye! Have a nice day"  
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
